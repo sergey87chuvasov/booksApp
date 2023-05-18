@@ -1,0 +1,19 @@
+{
+  "name": "book-app",
+  "version": "1.0.0",
+  "description": "simple book app",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Serge Ch",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "rollup": "^3.22.0"
+  }
+}
