@@ -1,3 +1,3 @@
 'use strict';
 
-function a() {}
+import './app.css';
