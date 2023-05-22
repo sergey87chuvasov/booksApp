@@ -1,0 +1,205 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\Anton\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@8.17.0
+2 info using node@v16.17.0
+3 timing npm:load:whichnode Completed in 1ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:C:\Users\Anton\AppData\Roaming\npm\node_modules\npm\npmrc Completed in 4ms
+6 timing config:load:builtin Completed in 5ms
+7 timing config:load:cli Completed in 1ms
+8 timing config:load:env Completed in 1ms
+9 timing config:load:file:C:\Users\Anton\Desktop\fokin\booksApp\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 3ms
+11 verbose config error loading user config [Error: EISDIR: illegal operation on a directory, read] {
+11 verbose config   errno: -4068,
+11 verbose config   code: 'EISDIR',
+11 verbose config   syscall: 'read'
+11 verbose config }
+12 timing config:load:file:C:\Users\Anton\.npmrc Completed in 5ms
+13 timing config:load:user Completed in 5ms
+14 timing config:load:file:C:\Users\Anton\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+15 timing config:load:global Completed in 1ms
+16 timing config:load:validate Completed in 1ms
+17 timing config:load:credentials Completed in 1ms
+18 timing config:load:setEnvs Completed in 2ms
+19 timing config:load Completed in 23ms
+20 timing npm:load:configload Completed in 23ms
+21 timing npm:load:mkdirpcache Completed in 1ms
+22 timing npm:load:mkdirplogs Completed in 1ms
+23 verbose title npm install on-change
+24 verbose argv "install" "on-change"
+25 timing npm:load:setTitle Completed in 2ms
+26 timing config:load:flatten Completed in 9ms
+27 timing npm:load:display Completed in 11ms
+28 verbose logfile logs-max:10 dir:C:\Users\Anton\Desktop\fokin\booksApp\UsersAnton.npmrc\_logs
+29 verbose logfile C:\Users\Anton\Desktop\fokin\booksApp\UsersAnton.npmrc\_logs\2023-05-22T19_37_24_090Z-debug-0.log
+30 timing npm:load:logFile Completed in 22ms
+31 timing npm:load:timers Completed in 0ms
+32 timing npm:load:configScope Completed in 0ms
+33 timing npm:load Completed in 62ms
+34 timing arborist:ctor Completed in 1ms
+35 silly logfile done cleaning log files
+36 timing idealTree:init Completed in 185ms
+37 timing idealTree:userRequests Completed in 2ms
+38 silly idealTree buildDeps
+39 silly fetch manifest on-change@*
+40 timing arborist:ctor Completed in 1ms
+41 http fetch GET 200 https://registry.npmjs.org/on-change 715ms (cache miss)
+42 silly placeDep ROOT on-change@4.0.2 OK for: book-app@1.0.0 want: *
+43 timing idealTree:#root Completed in 733ms
+44 timing idealTree:node_modules/on-change Completed in 0ms
+45 timing idealTree:buildDeps Completed in 735ms
+46 timing idealTree:fixDepFlags Completed in 4ms
+47 timing idealTree Completed in 953ms
+48 timing reify:loadTrees Completed in 955ms
+49 timing reify:diffTrees Completed in 22ms
+50 silly reify moves {}
+51 timing reify:retireShallow Completed in 0ms
+52 timing reify:createSparse Completed in 7ms
+53 timing reify:loadBundles Completed in 0ms
+54 silly audit bulk request {
+54 silly audit   '@eslint-community/eslint-utils': [ '4.4.0' ],
+54 silly audit   '@eslint-community/regexpp': [ '4.5.1' ],
+54 silly audit   '@eslint/eslintrc': [ '2.0.3' ],
+54 silly audit   '@eslint/js': [ '8.40.0' ],
+54 silly audit   '@humanwhocodes/config-array': [ '0.11.8' ],
+54 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+54 silly audit   '@humanwhocodes/object-schema': [ '1.2.1' ],
+54 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+54 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+54 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+54 silly audit   '@rollup/plugin-node-resolve': [ '15.0.2' ],
+54 silly audit   '@rollup/pluginutils': [ '5.0.2' ],
+54 silly audit   '@types/estree': [ '1.0.1' ],
+54 silly audit   '@types/resolve': [ '1.20.2' ],
+54 silly audit   acorn: [ '8.8.2' ],
+54 silly audit   'acorn-jsx': [ '5.3.2' ],
+54 silly audit   ajv: [ '6.12.6' ],
+54 silly audit   'ansi-regex': [ '5.0.1' ],
+54 silly audit   'ansi-styles': [ '4.3.0' ],
+54 silly audit   argparse: [ '2.0.1' ],
+54 silly audit   'balanced-match': [ '1.0.2' ],
+54 silly audit   'brace-expansion': [ '1.1.11' ],
+54 silly audit   'builtin-modules': [ '3.3.0' ],
+54 silly audit   callsites: [ '3.1.0' ],
+54 silly audit   chalk: [ '4.1.2' ],
+54 silly audit   'color-convert': [ '2.0.1' ],
+54 silly audit   'color-name': [ '1.1.4' ],
+54 silly audit   'concat-map': [ '0.0.1' ],
+54 silly audit   'cross-spawn': [ '7.0.3' ],
+54 silly audit   debug: [ '4.3.4' ],
+54 silly audit   'deep-is': [ '0.1.4' ],
+54 silly audit   deepmerge: [ '4.3.1' ],
+54 silly audit   doctrine: [ '3.0.0' ],
+54 silly audit   'escape-string-regexp': [ '4.0.0' ],
+54 silly audit   eslint: [ '8.40.0' ],
+54 silly audit   'eslint-scope': [ '7.2.0' ],
+54 silly audit   'eslint-visitor-keys': [ '3.4.1' ],
+54 silly audit   espree: [ '9.5.2' ],
+54 silly audit   esquery: [ '1.5.0' ],
+54 silly audit   esrecurse: [ '4.3.0' ],
+54 silly audit   estraverse: [ '5.3.0' ],
+54 silly audit   'estree-walker': [ '2.0.2' ],
+54 silly audit   esutils: [ '2.0.3' ],
+54 silly audit   'fast-deep-equal': [ '3.1.3' ],
+54 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+54 silly audit   'fast-levenshtein': [ '2.0.6' ],
+54 silly audit   fastq: [ '1.15.0' ],
+54 silly audit   'file-entry-cache': [ '6.0.1' ],
+54 silly audit   'find-up': [ '5.0.0' ],
+54 silly audit   'flat-cache': [ '3.0.4' ],
+54 silly audit   flatted: [ '3.2.7' ],
+54 silly audit   'fs.realpath': [ '1.0.0' ],
+54 silly audit   fsevents: [ '2.3.2' ],
+54 silly audit   'function-bind': [ '1.1.1' ],
+54 silly audit   glob: [ '7.2.3' ],
+54 silly audit   'glob-parent': [ '6.0.2' ],
+54 silly audit   globals: [ '13.20.0' ],
+54 silly audit   'grapheme-splitter': [ '1.0.4' ],
+54 silly audit   has: [ '1.0.3' ],
+54 silly audit   'has-flag': [ '4.0.0' ],
+54 silly audit   ignore: [ '5.2.4' ],
+54 silly audit   'import-fresh': [ '3.3.0' ],
+54 silly audit   imurmurhash: [ '0.1.4' ],
+54 silly audit   inflight: [ '1.0.6' ],
+54 silly audit   inherits: [ '2.0.4' ],
+54 silly audit   'is-builtin-module': [ '3.2.1' ],
+54 silly audit   'is-core-module': [ '2.12.1' ],
+54 silly audit   'is-extglob': [ '2.1.1' ],
+54 silly audit   'is-glob': [ '4.0.3' ],
+54 silly audit   'is-module': [ '1.0.0' ],
+54 silly audit   'is-path-inside': [ '3.0.3' ],
+54 silly audit   isexe: [ '2.0.0' ],
+54 silly audit   'js-sdsl': [ '4.4.0' ],
+54 silly audit   'js-yaml': [ '4.1.0' ],
+54 silly audit   'json-schema-traverse': [ '0.4.1' ],
+54 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+54 silly audit   levn: [ '0.4.1' ],
+54 silly audit   'locate-path': [ '6.0.0' ],
+54 silly audit   'lodash.merge': [ '4.6.2' ],
+54 silly audit   minimatch: [ '3.1.2' ],
+54 silly audit   ms: [ '2.1.2' ],
+54 silly audit   'natural-compare': [ '1.4.0' ],
+54 silly audit   once: [ '1.4.0' ],
+54 silly audit   optionator: [ '0.9.1' ],
+54 silly audit   'p-limit': [ '3.1.0' ],
+54 silly audit   'p-locate': [ '5.0.0' ],
+54 silly audit   'parent-module': [ '1.0.1' ],
+54 silly audit   'path-exists': [ '4.0.0' ],
+54 silly audit   'path-is-absolute': [ '1.0.1' ],
+54 silly audit   'path-key': [ '3.1.1' ],
+54 silly audit   'path-parse': [ '1.0.7' ],
+54 silly audit   picomatch: [ '2.3.1' ],
+54 silly audit   'prelude-ls': [ '1.2.1' ],
+54 silly audit   punycode: [ '2.3.0' ],
+54 silly audit   'queue-microtask': [ '1.2.3' ],
+54 silly audit   resolve: [ '1.22.2' ],
+54 silly audit   'resolve-from': [ '4.0.0' ],
+54 silly audit   reusify: [ '1.0.4' ],
+54 silly audit   rimraf: [ '3.0.2' ],
+54 silly audit   rollup: [ '3.22.0' ],
+54 silly audit   'rollup-plugin-import-css': [ '3.2.1' ],
+54 silly audit   'run-parallel': [ '1.2.0' ],
+54 silly audit   'shebang-command': [ '2.0.0' ],
+54 silly audit   'shebang-regex': [ '3.0.0' ],
+54 silly audit   'strip-ansi': [ '6.0.1' ],
+54 silly audit   'strip-json-comments': [ '3.1.1' ],
+54 silly audit   'supports-color': [ '7.2.0' ],
+54 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+54 silly audit   'text-table': [ '0.2.0' ],
+54 silly audit   'type-check': [ '0.4.0' ],
+54 silly audit   'type-fest': [ '0.20.2' ],
+54 silly audit   'uri-js': [ '4.4.1' ],
+54 silly audit   which: [ '2.0.2' ],
+54 silly audit   'word-wrap': [ '1.2.3' ],
+54 silly audit   wrappy: [ '1.0.2' ],
+54 silly audit   'yocto-queue': [ '0.1.0' ],
+54 silly audit   'on-change': [ '4.0.2' ]
+54 silly audit }
+55 verbose reify failed optional dependency C:\Users\Anton\Desktop\fokin\booksApp\node_modules\fsevents
+56 silly reify mark deleted [
+56 silly reify   'C:\\Users\\Anton\\Desktop\\fokin\\booksApp\\node_modules\\fsevents'
+56 silly reify ]
+57 timing reifyNode:node_modules/fsevents Completed in 4ms
+58 silly tarball no local data for on-change@https://registry.npmjs.org/on-change/-/on-change-4.0.2.tgz. Extracting by manifest.
+59 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 295ms
+60 timing auditReport:getReport Completed in 303ms
+61 silly audit report {}
+62 timing auditReport:init Completed in 0ms
+63 timing reify:audit Completed in 309ms
+64 http fetch GET 200 https://registry.npmjs.org/on-change/-/on-change-4.0.2.tgz 712ms (cache miss)
+65 timing reifyNode:node_modules/on-change Completed in 723ms
+66 timing reify:unpack Completed in 724ms
+67 timing reify:unretire Completed in 0ms
+68 timing build:queue Completed in 15ms
+69 timing build:deps Completed in 16ms
+70 timing build Completed in 16ms
+71 timing reify:build Completed in 17ms
+72 timing reify:trash Completed in 4ms
+73 timing reify:save Completed in 64ms
+74 timing reify Completed in 1875ms
+75 silly ADD node_modules/on-change
+76 silly ADD
+77 timing command:install Completed in 1891ms
+78 verbose exit 0
+79 timing npm Completed in 2281ms
+80 info ok
