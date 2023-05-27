@@ -1039,10 +1039,10 @@
                 <img src="./static/logo.svg" alt="logo" />
             </div>
             <div class="menu">
-                <a class="menu__item" href="#favorites">
+                <a class="menu__item" href="#">
                     <img src="./static/search.svg" alt="search icon" />Поиск книг
                 </a>
-                <a class="menu__item" href="#">
+                <a class="menu__item" href="#favorites">
                     <img src="./static/favorites.svg" alt="favorite icon" />Избранное
                     <div class="menu__counter">${this.appState.favorites.length}</div>
                 </a>
@@ -1171,13 +1171,12 @@
         return this.el;
       }
 
-      this.el.classList.add('card_list');
-      this.el.innerHTML = `
-      <h1>Найдено книг - ${this.parentState.numFound}</h1>
-    `;
+      const cardGrid = document.createElement('div');
+      cardGrid.classList.add('card_grid');
+      this.el.append(cardGrid);
 
       for (const card of this.parentState.list) {
-        this.el.append(new Card(this.appState, card).render());
+        cardGrid.append(new Card(this.appState, card).render());
       }
       return this.el;
     }
@@ -1198,6 +1197,11 @@
       this.appState = onChange(this.appState, this.appStateHook.bind(this));
       this.state = onChange(this.state, this.stateHook.bind(this));
       this.setTitle('Поиск книг');
+    }
+
+    destroy() {
+      onChange.unsubscribe(this.appState);
+      onChange.unsubscribe(this.state);
     }
 
     appStateHook(path) {
@@ -1234,6 +1238,11 @@
 
     render() {
       const main = document.createElement('div');
+
+      main.innerHTML = `
+      <h1>Найдено книг - ${this.state.numFound}</h1>
+    `;
+
       main.append(new Search(this.state).render());
       main.append(new CardList(this.appState, this.state).render());
       this.app.innerHTML = '';
@@ -1247,14 +1256,56 @@
     }
   }
 
+  class FavoritesView extends AbstractView {
+    constructor(appState) {
+      super();
+      this.appState = appState;
+      this.appState = onChange(this.appState, this.appStateHook.bind(this));
+      this.setTitle('Мои книги');
+    }
+
+    destroy() {
+      onChange.unsubscribe(this.appState);
+    }
+
+    appStateHook(path) {
+      if (path === 'favorites') {
+        this.render();
+      }
+    }
+
+    render() {
+      const main = document.createElement('div');
+
+      main.innerHTML = `
+      <h1>Избранное</h1>
+    `;
+
+      main.append(
+        new CardList(this.appState, { list: this.appState.favorites }).render()
+      );
+      this.app.innerHTML = '';
+      this.app.append(main);
+      this.renderHeader();
+    }
+
+    renderHeader() {
+      const header = new Header(this.appState).render();
+      this.app.prepend(header);
+    }
+  }
+
   class App {
     // public property
-    routes = [{ path: '', view: MainView }];
+    routes = [
+      { path: '', view: MainView },
+      { path: '#favorites', view: FavoritesView },
+    ];
 
     // state
     appState = {
-      favorites: []
-    }
+      favorites: [],
+    };
 
     constructor() {
       window.addEventListener('hashchange', this.route.bind(this));
